@@ -5,6 +5,7 @@ import { fetchNotes, getNote } from "./NotesFunction";
 const ContextApi = createContext();
 
 const NoteContext = ({ children }) => {
+
     const [notes, setNotes] = useState([]);
     const [noteData, setNoteData] = useState({});
     const [showNotes, setShowNotes] = useState(false);
@@ -14,7 +15,7 @@ const NoteContext = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(() => {
         return localStorage.getItem("isAuthenticated") === "true";
     });
-    
+
     useEffect(() => {
         localStorage.setItem("isAuthenticated", isAuthenticated);
     }, [isAuthenticated]);
