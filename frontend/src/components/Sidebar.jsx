@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ContextApi } from '../context/ContextApi';
-import NavListItem from './NavListitem';
+import { NavListItem } from '../components';
 
 
 const Sidebar = () => {
