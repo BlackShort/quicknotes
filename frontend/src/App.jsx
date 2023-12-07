@@ -7,6 +7,7 @@ import { Login, Signup } from './pages';
 import { Home, Navbar, Welcome } from './components';
 import { useContext, useEffect } from 'react';
 import axios from 'axios';
+import { server } from './main';
 
 
 const ProtectedRoute = ({ children }) => {

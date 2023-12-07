@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { ContextApi } from '../context/ContextApi';
+import { server } from '../main';
+
 
 const Login = () => {
 
