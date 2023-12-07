@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/img2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: brightness(0.5);
+    font-family: 'poppins', sans-serif;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation .login-button {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid #cdcdcd;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #cdcdcd;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+
+}
+
+
+.navigation .login-button:hover {
+    background: #cdcdcd;
+    color: #3e3a3a;
+}
+
+.landing {
+    display: flex;
+    height: -webkit-fill-available;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.landing h4 {
+    width: 80%;
+    padding-left: 10%;
+    font-size: 4.5rem;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.landing p {
+    width: 60%;
+    padding-left: 10%;
+    font-size: 1.2rem;
+    color: #f0eded;
+    font-weight: 400;
+    margin-top: 1em;
+    font-family: system-ui;
+}
+
+.landing .left {
+    width: 70%;
+    height: 60%;
+}
+
+.landing .right {
+    width: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.landing .right img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 1em;
+    border: 2px solid #2e8b57;
+}
+
+#save {
+    width: 200px;
+    background-color: #1f8f4f;
+    box-shadow: 0px 10px 20px #006d2a62;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 10%;
+    margin-top: 2em;
+}
