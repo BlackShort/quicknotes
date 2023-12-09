@@ -3,6 +3,8 @@ import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { ContextApi } from "../context/ContextApi";
+import { server } from '../main';
+
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -28,7 +30,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        `/api/v1/users/register`,
+        `${server}/users/register`,
         signupData,
         {
           headers: {
