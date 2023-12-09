@@ -22,7 +22,7 @@ const Navbar = ({ color }) => {
         {
           isAuthenticated ? (
             <>
-              <p className='username'>{user.name}</p>
+              <p className='username'>{user?.name}</p>
               <button type='button' onClick={handleLogout} className="login-button">Logout</button>
             </>
           ) : (

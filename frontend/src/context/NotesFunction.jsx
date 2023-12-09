@@ -1,6 +1,5 @@
 import axios from "axios";
 import toast from 'react-hot-toast'; 
-import {server} from '../main';
 
 export const fetchNotes = async () => {
     try {
