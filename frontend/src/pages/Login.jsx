@@ -3,8 +3,6 @@ import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { ContextApi } from '../context/ContextApi';
-import { server } from '../main';
-
 
 const Login = () => {
 
@@ -37,7 +35,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${server}/users/login`, loginData, {
+      const response = await axios.post(`/api/v1/users/login`, loginData, {
         headers: {
           'Content-Type': 'application/json',
         },

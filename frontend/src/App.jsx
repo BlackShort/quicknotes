@@ -7,8 +7,6 @@ import { Login, Signup } from './pages';
 import { Home, Navbar, Welcome } from './components';
 import { useContext, useEffect } from 'react';
 import axios from 'axios';
-import { server } from './main';
-
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useContext(ContextApi);
@@ -26,7 +24,7 @@ const App = () => {
   useEffect(() => {
     const checkUserAuthentication = async () => {
       try {
-        const response = await axios.get(`${server}/users/profile`, {
+        const response = await axios.get(`/api/v1/users/profile`, {
           withCredentials: true,
         });
 

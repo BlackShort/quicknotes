@@ -4,7 +4,7 @@ import {server} from '../main';
 
 export const fetchNotes = async () => {
     try {
-        const response = await axios.get(`${server}/notes/all`, {
+        const response = await axios.get(`/notes/all`, {
             withCredentials: true,
         });
 
@@ -19,7 +19,7 @@ export const fetchNotes = async () => {
 
 export const getNote = async (noteid) => {
     try {
-        const response = await axios.get( `${server}/notes/${noteid}`  , {
+        const response = await axios.get( `/api/v1/notes/${noteid}`  , {
             withCredentials: true,
         });
 
@@ -33,7 +33,7 @@ export const getNote = async (noteid) => {
 
 export const Logout = async (setIsAuthenticated) => {
     try {
-        const response = await axios.get(`${server}/users/logout`, {
+        const response = await axios.get(`/api/v1/users/logout`, {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -55,7 +55,7 @@ export const Logout = async (setIsAuthenticated) => {
 
 export const addNotes = async (noteInfo) => {
     try {
-        const response = await axios.post(`${server}/notes/new`, noteInfo, {
+        const response = await axios.post(`/api/v1/notes/new`, noteInfo, {
             headers: {
                 "Content-Type": 'application/json',
             },
@@ -72,7 +72,7 @@ export const addNotes = async (noteInfo) => {
 
 export const deleteNotes = async (noteid) => {
     try {
-        const response = await axios.delete(`${server}/notes/${noteid}`, {
+        const response = await axios.delete(`/api/v1/notes/${noteid}`, {
             headers: {
                 "Content-Type": 'application/json',
             },
