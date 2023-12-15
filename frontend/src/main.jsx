@@ -4,8 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { NoteContext } from './context/ContextApi';
 
-// export const server = "https://quicknotes-p7j0.onrender.com/api/v1";
-export const server = "http://localhost:4000/api/v1";
+export const server = "https://quicknotes-p7j0.onrender.com/api/v1";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
