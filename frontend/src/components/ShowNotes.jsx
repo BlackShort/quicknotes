@@ -3,7 +3,7 @@ import { ContextApi } from '../context/ContextApi';
 import { deleteNotes } from '../context/NotesFunction';
 
 const ShowNotes = () => {
-    const { noteId, setData, setNoteData, showNotes, setShowNotes, updateNoteData, setUpdateNoteData, noteData } = useContext(ContextApi);
+    const { noteId, setData, setNoteData, showNotes, setShowNotes, updateNoteData, setUpdateNoteData, noteData, handleFetchNote } = useContext(ContextApi);
 
     const UpdateData = () => {
         setUpdateNoteData(!updateNoteData);
@@ -26,6 +26,7 @@ const ShowNotes = () => {
     const DeleteNote = async () => {
         ShowNote();
         await deleteNotes(noteId);
+        handleFetchNote();
     };
 
     return (
