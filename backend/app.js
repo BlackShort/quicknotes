@@ -17,15 +17,11 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Adjusted CORS setup
-app.use(cors({
+app.use("*",cors({
     origin: "https://quicknotes-knight.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }));
-
-
-// Handle preflight OPTIONS requests
-app.options("*", cors());
 
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/notes", noteRouter);

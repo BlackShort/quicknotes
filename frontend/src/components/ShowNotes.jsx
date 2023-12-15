@@ -11,7 +11,7 @@ const ShowNotes = () => {
         setData(noteData);
     };
 
-    const DeleteNote = async () => {
+    const ShowNote = () => {
         setShowNotes(!showNotes);
         setData({
             title: "",
@@ -21,6 +21,10 @@ const ShowNotes = () => {
             title: "",
             description: ""
         });
+    }
+    
+    const DeleteNote = async () => {
+        ShowNote();
         await deleteNotes(noteId);
     };
 
@@ -33,7 +37,7 @@ const ShowNotes = () => {
                         <svg onClick={DeleteNote} xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
                             <path d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1 -32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1 -32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1 -32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.7 23.7 0 0 0 -21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0 -16-16z" />
                         </svg>
-                        <svg onClick={() => setShowNotes(!showNotes)} id="CloseNote" xmlns="http://www.w3.org/2000/svg" height="16" width="11" viewBox="0 0 352 512">
+                        <svg onClick={ShowNote} id="CloseNote" xmlns="http://www.w3.org/2000/svg" height="16" width="11" viewBox="0 0 352 512">
                             <path
                                 d="M242.7 256l100.1-100.1c12.3-12.3 12.3-32.2 0-44.5l-22.2-22.2c-12.3-12.3-32.2-12.3-44.5 0L176 189.3 75.9 89.2c-12.3-12.3-32.2-12.3-44.5 0L9.2 111.5c-12.3 12.3-12.3 32.2 0 44.5L109.3 256 9.2 356.1c-12.3 12.3-12.3 32.2 0 44.5l22.2 22.2c12.3 12.3 32.2 12.3 44.5 0L176 322.7l100.1 100.1c12.3 12.3 32.2 12.3 44.5 0l22.2-22.2c12.3-12.3 12.3-32.2 0-44.5L242.7 256z" />
                         </svg>
