@@ -15,16 +15,16 @@ config({
 // Using Middleware
 app.use(express.json());
 app.use(cookieParser());
-// app.use("*",
-//     cors({
-//         origin: process.env.FRONTEND_URL,
-//         methods: ["GET", "POST", "PUT", "DELETE"],
-//         credentials: true,
-//     })
-// );
-app.use("*", cors({
-    origin: '*'
-}))
+
+// Adjusted CORS setup
+app.use(cors({
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+}));
+
+// Handle preflight OPTIONS requests
+app.options("*", cors());
 
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/notes", noteRouter);
