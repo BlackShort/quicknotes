@@ -246,11 +246,13 @@
 
             .pop-head {
                 display: flex;
-                align-items: baseline;
+                align-items: center;
                 justify-content: space-between;
-                width: 85%;
+                min-height: 2.8em;
+                padding-right: 1.1em;
+                padding-top: 0.1em;
 
-                p {
+                h2 {
                     font-size: 1.5rem;
                     font-weight: 500;
                 }
@@ -315,6 +317,7 @@
             margin-right: 0.5em;
             overflow-y: scroll;
             overflow-x: hidden;
+            position: relative;
 
             .pop-head {
                 display: flex;
@@ -326,6 +329,20 @@
                     font-weight: 500;
                 }
 
+                .icons {
+                    display: flex;
+                    align-items: baseline;
+                    justify-content: center;
+                    gap: 2em;
+                    height: 100%;
+                    padding-top: 0.7em;
+
+                    svg:nth-child(1) {
+                        width: 1.3em;
+                        height: 1.3em;
+                    }
+                }
+
             }
 
             p {
@@ -334,6 +351,23 @@
                 font-weight: 400;
             }
 
+        }
+
+        .editNote {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: max-content;
+            background: #ffa228;
+            padding: 1.3em;
+            border-radius: 50%;
+            bottom: 2.5em;
+            right: 2.5em;
+            cursor: pointer;
+            z-index: 20;
+            border: none;
+            outline: none;
         }
 
         svg {
