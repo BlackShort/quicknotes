@@ -18,10 +18,11 @@ app.use(cookieParser());
 
 // Adjusted CORS setup
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
+    origin: "https://quicknotes-knight.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }));
+
 
 // Handle preflight OPTIONS requests
 app.options("*", cors());
