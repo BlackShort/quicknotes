@@ -53,7 +53,8 @@ const Signup = () => {
 
     } catch (error) {
       setIsAuthenticated(false);
-      toast.error(error.response.message || "Server Error!");
+      console.log(error)
+      toast.error("Server Error!");
       navigate('/signup');
     }
   };
