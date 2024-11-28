@@ -44,8 +44,6 @@ const App = () => {
     checkUserAuthentication();
   }, [setIsAuthenticated, setUser]);
 
-
-
   return (
     <div className='Notes_App'>
       <Router>

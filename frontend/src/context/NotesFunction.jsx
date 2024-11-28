@@ -34,9 +34,6 @@ export const getNote = async (noteid) => {
 export const Logout = async (setIsAuthenticated) => {
     try {
         const response = await axios.get(`${server}/users/logout`, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
             withCredentials: true,
         });
 
